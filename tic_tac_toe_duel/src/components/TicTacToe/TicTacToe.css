@@ -1,0 +1,57 @@
+.tictactoe {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  padding: 20px;
+}
+
+.game-status {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--text-color);
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  background-color: var(--border-color);
+  padding: 8px;
+  border-radius: 8px;
+}
+
+.square {
+  width: 80px;
+  height: 80px;
+  background-color: var(--kavia-dark);
+  border: 2px solid var(--border-color);
+  border-radius: 4px;
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--text-color);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.square:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.square:focus {
+  outline: none;
+  border-color: var(--kavia-orange);
+}
+
+.reset-button {
+  margin-top: 16px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+  .square {
+    width: 60px;
+    height: 60px;
+    font-size: 1.5rem;
+  }
+}
